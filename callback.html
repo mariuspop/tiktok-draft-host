@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TikTok login code</title>
+<style>body{font:16px/1.5 -apple-system,system-ui,sans-serif;max-width:40rem;margin:4rem auto;padding:0 1rem}code{font-size:1.2rem;word-break:break-all;display:block;padding:.75rem;background:#f3f3f3;border-radius:6px;user-select:all}</style></head>
+<body><h1>Paste these into the terminal</h1>
+<p>code</p><code id="code"></code>
+<p>state</p><code id="state"></code>
+<p id="err"></p>
+<script>
+const q=new URLSearchParams(location.search);
+document.getElementById('code').textContent=q.get('code')||'(no code in the URL)';
+document.getElementById('state').textContent=q.get('state')||'';
+if(q.get('error'))document.getElementById('err').textContent=q.get('error')+': '+(q.get('error_description')||'');
+</script></body></html>
